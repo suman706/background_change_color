@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML DOM</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<style type="text/css">
+		body{
+			background-color: #1e90ff;
+		}
+		button{
+			margin-left: 50%;
+			margin-top: 20%; 
+		}
+	</style>
+</head>
+<body id="colors">
+	<button type="button" class="btn btn-danger" onclick=change()>Turn On</button>
+
+	<script>
+		function change(){
+			const color1 = Math.floor(10+ Math.random() * 250);
+			const color2 = Math.floor(10+ Math.random() * 250);
+			const color3 = Math.floor(10+ Math.random() * 250);
+
+			const element = document.getElementById("colors").style.backgroundColor = 'rgb(' + color1 + ',' + color2 + ',' + color3 + ')';
+		}
+	</script>
+</body>
+</html>
